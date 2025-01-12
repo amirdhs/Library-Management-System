@@ -30,10 +30,3 @@ class Book:
 
 
 
-
-# print(first_book.show_info())
-# first_book.update_quantity(4)
-# print(first_book.quantity)
-# first_book.borrow(3)
-# first_book.is_active()
-# first_book.update_quantity(34)

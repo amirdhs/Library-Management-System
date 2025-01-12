@@ -1,0 +1,92 @@
+[
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "isbn": "9780061120084",
+        "quantity": 4
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "isbn": "9780451524935",
+        "quantity": 3
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "isbn": "9780743273565",
+        "quantity": 5
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "isbn": "9780141040349",
+        "quantity": 2
+    },
+    {
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "isbn": "9781503280786",
+        "quantity": 3
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "isbn": "9780316769488",
+        "quantity": 6
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "isbn": "9780547928227",
+        "quantity": 8
+    },
+    {
+        "title": "Little Women",
+        "author": "Louisa May Alcott",
+        "isbn": "9780143135008",
+        "quantity": 4
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "isbn": "9781451673319",
+        "quantity": 5
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "isbn": "9780060850524",
+        "quantity": 3
+    },
+    {
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "isbn": "9780544003413",
+        "quantity": 7
+    },
+    {
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "isbn": "9780486454115",
+        "quantity": 2
+    },
+    {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "isbn": "9780061122415",
+        "quantity": 5
+    },
+    {
+        "title": "The Odyssey",
+        "author": "Homer",
+        "isbn": "9780140268867",
+        "quantity": 3
+    },
+    {
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "isbn": "9781853260629",
+        "quantity": 2
+    }
+]
