@@ -83,12 +83,3 @@ List of Books:
 2. The Odyssey, Author: Homer, ISBN: 9780140268867, Quantity: 3
 3. Crime and Punishment, Author: Fyodor Dostoevsky, ISBN: 9780486454115, Quantity: 2
 ```
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Acknowledgments
-
-- The `Book` and `Library` classes were designed to demonstrate object-oriented programming principles in Python.
-
