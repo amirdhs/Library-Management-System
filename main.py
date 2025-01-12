@@ -30,16 +30,25 @@ def start():
         except ValueError :
             print("Invalid input. Please enter a number between 1 and 7.")
             continue
-        if user_input == 1 :
-            title = input("Enter book title:")
-            auther = input("Enter book author:")
-            isbn = input("Enter book ISBN: ")
-            quantity = int(input("Enter book quantity:"))
-            book_list.add_book(title,auther,isbn,quantity)
+
+        if user_input == 1:
+            title = input("Enter book title: ").strip()
+            author = input("Enter book author: ").strip()
+            isbn = input("Enter book ISBN: ").strip()
+            try:
+                quantity = int(input("Enter book quantity: "))
+                book_list.add_book(title, author, isbn, quantity)
+                print(f"Book '{title}' added successfully!")
+            except ValueError:
+                print("Invalid quantity. Please enter a valid number.")
 
         elif user_input == 2:
-            title_to_remove = input("Enter the title to remove: ")
-            book_list.remove_book(title_to_remove)
+            title_to_remove = input("Enter the title to remove: ").strip()
+            try:
+                book_list.remove_book(title_to_remove)
+                print(f"Book '{title_to_remove}' removed successfully!")
+            except ValueError as e:
+                print(e)
 
         elif user_input == 3:
            book_list.list_books()
@@ -56,14 +65,15 @@ def start():
 
         elif user_input == 6 :
             book_list.list_books()
-            book = input("Enter book title to borrow: ")
+            book = input("Enter book title to borrow: ").strip()
             print(book_list.borrow_book(book))
 
         elif user_input == 7:
             print("Thank you for using the Library Management System. Goodbye!")
             break
 
-
+        else:
+            print("Invalid choice. Please choose a number between 1 and 7.")
 
 
 if __name__ == "__main__":

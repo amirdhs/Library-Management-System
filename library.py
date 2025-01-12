@@ -12,14 +12,18 @@ class Library:
         self.books.append(new_book)
         print(f"'{title}' added to the Library successfully.")
 
-    def remove_book(self, book_to_remove):
-        if book_to_remove in self.books:
-            self.books.remove(book_to_remove)
-            print(f"'{book_to_remove.title}' removed from the Library successfully.")
-        else:
-            raise ValueError(f"{book_to_remove} doesn't exist in the Library.")
+    def remove_book(self, title_to_remove):
+        for book in self.books:
+            if title_to_remove.lower() in book.title.lower():
+                self.books.remove(book)
+                print(f"'{book.title}' removed from the Library successfully.")
+                return
+        raise ValueError(f"'{title_to_remove}' doesn't exist in the Library.")
 
     def list_books(self):
+        if not self.books:
+            print("No books in the Library.")
+            return
         print("List of Books:")
         for index, book in enumerate(self.books, start=1):
             print(f"{index}. {book.show_info()}")
