@@ -30,10 +30,6 @@ class Book:
 
 
 
-first_book = book("1984","George Orwell","9780451524935",3)
-second_book = Book("The Odyssey","Homer","9780140268867",3)
-third_book = Book("Crime and Punishment","Fyodor Dostoevsky","9780486454115",2)
-
 
 # print(first_book.show_info())
 # first_book.update_quantity(4)
