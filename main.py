@@ -1,14 +1,26 @@
+import json
+
 import book
 import library
-
+import json
 
 # Create Book instances.
-first_book = book.Book("1984", "George Orwell", "9780451524935", 3)
-second_book = book.Book("The Odyssey", "Homer", "9780140268867", 3)
-third_book = book.Book("Crime and Punishment", "Fyodor Dostoevsky", "9780486454115", 2)
+# first_book = book.Book("1984", "George Orwell", "9780451524935", 3)
+# second_book = book.Book("The Odyssey", "Homer", "9780140268867", 3)
+# third_book = book.Book("Crime and Punishment", "Fyodor Dostoevsky", "9780486454115", 2)
+
+# json file
+with open("books.json", "r") as file:
+    data = json.load(file)
+
+book_list = []
+for book_element in data:
+    book_object = book.Book(book_element["title"],book_element["author"],book_element["isbn"],book_element["quantity"])
+    book_list.append(book_object)
 
 #Initialize Library with books.
-book_list = library.Library([first_book, second_book, third_book])
+book_list = library.Library(book_list)
+
 
 def menu():
     print("""
@@ -19,7 +31,8 @@ def menu():
 4. Search books by title.
 5. Search books by author.
 6. Borrow a book.
-7. Exit.
+7. Change Quantity
+8. Exit.
     """)
 
 def start():
@@ -69,6 +82,13 @@ def start():
             print(book_list.borrow_book(book))
 
         elif user_input == 7:
+            new_quantity = int(input("Enter new Quantity: "))
+            title = input("enter the title :")
+            temp_book = book_list.return_book_by_title(title)
+            temp_book.update_quantity(new_quantity)
+
+
+        elif user_input == 8:
             print("Thank you for using the Library Management System. Goodbye!")
             break
 

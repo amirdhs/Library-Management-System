@@ -34,6 +34,12 @@ class Library:
                 return book.show_info()
         return "This book doesn't exist in the Library."
 
+    def return_book_by_title(self,title):
+        for book in self.books:
+            if title.lower() in book.title.lower():
+                return book
+        return "This book doesn't exist in the Library."
+
     def search_by_author(self,author):
         for book in self.books:
             if author.lower() in book.author.lower():
@@ -46,6 +52,7 @@ class Library:
                 book.quantity -= 1
                 return f"You have successfully borrowed: {book.title}"
         return f"{title} doesn't exist in the Library."
+
 
 
 
